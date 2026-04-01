@@ -32,10 +32,10 @@ function sortear() {
     // 5. Adiciona ao histórico e exibe
     sorteados.push(resultado);
     resultadoTexto.innerHTML = resultado;
-    mensagemErro.innerHTML = ""; // Limpa mensagem se houver
+    mensagemErro.innerHTML = "";
 }
 
-// 6. Função para resetar (vincule a um novo botão ou mude o range)
+// 6. Função para resetar
 function resetarSorteio() {
     sorteados = [];
     document.querySelector(".solution").innerHTML = "00";
