@@ -14,10 +14,12 @@ function generateNumber() {
 
 button.addEventListener('click', generateNumber);
 */
+
+const solutionDiv = document.querySelector('.solution');
 function generateNumber() {
     
     const minInput = Math.ceil(document.getElementById('min').value);
     const maxInput = Math.floor(document.getElementById('max').value);
     const solution = Math.floor(Math.random() * (maxInput - minInput)) + minInput;
-    alert(`Número sorteado: ${solution}`);
+    solutionDiv.textContent = `Número sorteado: ${solution}`;
 }
