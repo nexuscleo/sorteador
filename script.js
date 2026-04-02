@@ -1,12 +1,14 @@
+const resultadoTexto = document.querySelector(".solution");
+const mensagemErro = document.querySelector(".message");
+const inputMin = document.getElementById("min");
+const inputMax = document.getElementById("max");
+
 let sorteados = [];
 
 function sortear() {
-    const min = Math.ceil(document.getElementById("min").value);
-    const max = Math.floor(document.getElementById("max").value);
-    const resultadoTexto = document.querySelector(".solution");
-    const mensagemErro = document.querySelector(".message");
+    const min = Math.ceil(inputMin.value);
+    const max = Math.floor(inputMax.value);
 
-    // Validação básica
     if (min >= max) {
         alert("O valor mínimo deve ser menor que o valor máximo!");
         return;
@@ -38,6 +40,6 @@ function sortear() {
 // 6. Função para resetar
 function resetarSorteio() {
     sorteados = [];
-    document.querySelector(".solution").innerHTML = "00";
+    document.querySelector(".solution").innerHTML = "--";
     document.querySelector(".message").innerHTML = "";
 }
